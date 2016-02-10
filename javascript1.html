@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style ="color:red";> Validation of given Input</h1>
+
+<p>Enter a number between 1 and 12:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x, text;
+
+    // pull the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+    // If x is not a Number (NaN) or less than one or greater than 12
+    if (isNaN(x) || x < 1 || x > 12) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
